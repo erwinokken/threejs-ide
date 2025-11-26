@@ -84,3 +84,12 @@ renderer.setAnimationLoop(animate);
 	Add threeIDE at the end
 */
 threeIDE.createGUI();
+
+/*
+	On window resize
+*/
+window.addEventListener("resize", () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
